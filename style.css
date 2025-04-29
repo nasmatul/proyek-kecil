@@ -1,0 +1,184 @@
+/* BACKGROUND UNGU DREAMY */
+body {
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7, #d1c4e9);
+    font-family: 'Varela Round', sans-serif;
+    overflow-x: hidden;
+    animation: gradientBG 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* CONTAINER UTAMA */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(142, 68, 173, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* JUDUL */
+h1 {
+    color: #8e44ad;
+    font-size: 3em;
+    margin-bottom: 30px;
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 3px 3px 0 #e1bee7;
+}
+
+.nama {
+    color: #9b59b6;
+    text-decoration: underline wavy;
+}
+
+/* FOTO KITA */
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 50px 0;
+    perspective: 1000px;
+}
+
+.photo-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #ce93d8;
+    box-shadow: 0 10px 20px rgba(155, 89, 182, 0.3);
+    position: relative;
+    transform-style: preserve-3d;
+    animation: 
+        float 5s ease-in-out infinite alternate,
+        rotate 20s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotateY(0); }
+    100% { transform: translateY(-20px) rotateY(360deg); }
+}
+
+.sticker {
+    position: absolute;
+    font-size: 2.5em;
+    bottom: -25px;
+    right: -25px;
+    animation: 
+        bounce 0.8s infinite alternate,
+        spin 3s linear infinite;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+}
+
+@keyframes bounce {
+    to { transform: translateY(-15px); }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* PESAN ROMANTIS */
+.message {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 
+        0 5px 15px rgba(206, 147, 216, 0.4),
+        inset 0 0 10px #e1bee7;
+    position: relative;
+    border: 3px dashed #ba68c8;
+}
+
+.message::before {
+    content: "💜";
+    position: absolute;
+    font-size: 3em;
+    top: -30px;
+    left: -30px;
+    animation: pulse 1.5s infinite;
+}
+
+.typed-text {
+    font-size: 1.8em;
+    color: #8e44ad;
+    min-height: 100px;
+    line-height: 1.6;
+    font-family: 'Indie Flower', cursive;
+}
+
+.hearts {
+    font-size: 2.5em;
+    animation: pulse 1s infinite;
+    margin-top: 20px;
+}
+
+/* TOMBOL GEMES */
+.btn-gemes {
+    background: linear-gradient(to right, #9b59b6, #8e44ad);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.5em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px auto;
+    box-shadow: 
+        0 10px 0 #6c3483,
+        0 0 20px rgba(155, 89, 182, 0.5);
+    transition: all 0.3s;
+    font-family: 'Varela Round', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-gemes:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 15px 0 #6c3483,
+        0 0 30px rgba(155, 89, 182, 0.7);
+}
+
+.btn-gemes:active {
+    transform: translateY(5px);
+    box-shadow: 
+        0 5px 0 #6c3483,
+        0 0 40px rgba(155, 89, 182, 0.9);
+}
+
+/* HATI TERBANG */
+.heart {
+    position: absolute;
+    font-size: 2em;
+    animation: float 8s linear infinite;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% { 
+        transform: translateY(100vh) rotate(0deg) scale(0.5); 
+        opacity: 0; 
+    }
+    10% { 
+        opacity: 0.7; 
+    }
+    90% { 
+        opacity: 0.7; 
+    }
+    100% { 
+        transform: translateY(-100px) rotate(360deg) scale(1.5); 
+        opacity: 0; 
+    }
+}
